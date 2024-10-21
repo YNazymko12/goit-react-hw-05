@@ -13,6 +13,7 @@ const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [inputValue, setInputValue] = useState(searchParams.get('query') ?? '');
 
   const movieName = searchParams.get('query') ?? '';
 
@@ -22,6 +23,7 @@ const MoviesPage = () => {
   };
 
   useEffect(() => {
+    if (!movieName) return;
     try {
       const getSearchMovies = async () => {
         try {
@@ -41,19 +43,26 @@ const MoviesPage = () => {
     }
   }, [movieName]);
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (inputValue.trim()) {
+      updateQuery(inputValue);
+    }
+  };
+
   return (
     <main>
-      <div className={css.container}>
+      <form className={css.container} onSubmit={handleSubmit}>
         <input
           className={css.input}
           type="text"
-          value={movieName}
-          onChange={e => updateQuery(e.target.value)}
+          value={inputValue}
+          onChange={e => setInputValue(e.target.value)}
         />
         <button className={css.button} type="submit">
           Search
         </button>
-      </div>
+      </form>
       {searchMovie && <MovieList movies={searchMovie} />}
       {loading && <Loader />}
       {error && <p className={cssError.error}>{error}</p>}
