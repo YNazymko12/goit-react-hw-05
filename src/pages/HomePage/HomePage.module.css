@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  margin-top: 32px;
+  font-size: 48px;
+  margin-bottom: 32px;
+  color: #5a5264;
+}

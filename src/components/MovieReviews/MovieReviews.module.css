@@ -1,0 +1,11 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.text {
+  margin-top: 16px;
+}

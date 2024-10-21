@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0 0 0 64px;
+}
+
+.link {
+  display: inline-block;
+  color: #5a595c;
+  font-size: 24px;
+  text-decoration: underline;
+  transition: color 250ms linear;
+}
+
+.link:hover,
+.link:focus {
+  color: #7964a3;
+}
+
+.linkImage {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+
+  z-index: 1;
+  display: none;
+  width: 400px;
+  height: 560px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-size: cover;
+  background-position: center;
+}
+
+.link:hover .linkImage,
+.link:focus .linkImage {
+  display: block;
+}

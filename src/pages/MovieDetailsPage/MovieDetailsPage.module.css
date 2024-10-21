@@ -1,0 +1,97 @@
+.main {
+  padding: 0 32px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 56px;
+  max-width: 1200px;
+  margin-bottom: 48px;
+}
+
+.image {
+  display: block;
+  width: 340px;
+  height: 440px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #5a595c;
+  margin-bottom: 24px;
+}
+
+.score {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #3f3f41;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #5a595c;
+  margin-bottom: 8px;
+}
+
+.overview {
+  font-size: 16px;
+  color: #3f3f41;
+  margin-bottom: 24px;
+}
+
+.genres {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.informationWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.informationList {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  color: #7957b8;
+  font-size: 18px;
+  transition: color 250ms linear;
+}
+
+.link:hover,
+.link:focus {
+  color: #503d73;
+  text-decoration: underline;
+}
+
+.companiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+}
+
+.companyLogo {
+  display: block;
+  width: auto;
+  height: 60px;
+  object-fit: cover;
+}
